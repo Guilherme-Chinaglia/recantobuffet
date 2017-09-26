@@ -1,0 +1,17 @@
+@import "../components/bootstrap/scss/bootstrap";
+@import "../components/font-awesome/scss/font-awesome";
+@import "https://fonts.googleapis.com/css?family=Miss+Fajardose";
+
+//header
+.col{
+
+	border: 1px solid #000;
+}
+
+.title{
+
+	font-family: 'Miss Fajardose', cursive;
+
+	color: #e74c3c;
+	text-transform: capitalize;
+}
