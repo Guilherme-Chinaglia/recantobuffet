@@ -1,11 +1,51 @@
 @import "../components/bootstrap/scss/bootstrap";
 @import "../components/font-awesome/scss/font-awesome";
-@import "https://fonts.googleapis.com/css?family=Miss+Fajardose";
+@import "https://fonts.googleapis.com/css?family=Miss+Fajardose|Roboto+Condensed";
 
-//header
-.col{
 
-	border: 1px solid #000;
+body{
+
+	font-family: 'Roboto Condensed', sans-serif;
+
+	.title{
+
+		font-family: 'Miss Fajardose', cursive;
+	}
+}
+//home
+.home{
+	
+	height: 100vh;	
+	background: url(../img/slide-1.jpg) no-repeat fixed center;
+}
+
+.teste{
+	height: 100vh;
+}
+
+
+//header-nav
+
+.menu-list{
+
+	padding: 1rem;
+
+	a{
+
+		text-transform: uppercase;
+
+		color: #fff;
+
+		&:hover{
+
+			text-decoration-color: #e74c3c;
+		}
+	}
+
+	.title-link{
+
+		text-decoration: none;
+	}
 }
 
 .title{
