@@ -10,23 +10,49 @@ body{
 	.title{
 
 		font-family: 'Miss Fajardose', cursive;
+		font-size: 4rem;
 	}
 }
+
 //home
 .home{
 	
+	display: flex;
+	justify-content: center;
 	height: 100vh;	
 	background: url(../img/slide-1.jpg) no-repeat fixed center;
 }
 
-.teste{
-	height: 100vh;
+.fix-nav{
+	
+	position: fixed;
+	width: 100%;
+	//background: rgba(0, 0, 0, 0.8);
 }
 
+.nav{
+	
+	justify-content: center;
+	
+	.nav-list{
 
-//header-nav
+		display: flex;
+		align-items: center;
+		margin-bottom: 0;
+		list-style-type: none;
 
-.menu-list{
+		.logo{
+
+			font-family: 'Miss Fajardose', cursive;
+			font-size: 5em;
+
+			color: #e74c3c;
+			text-transform: capitalize;
+		}
+	}
+}
+
+.nav-item{
 
 	padding: 1rem;
 
@@ -38,7 +64,8 @@ body{
 
 		&:hover{
 
-			text-decoration-color: #e74c3c;
+			color: #f0ad4e;
+			text-decoration: none;
 		}
 	}
 
@@ -48,10 +75,92 @@ body{
 	}
 }
 
-.title{
+.call-home{
 
-	font-family: 'Miss Fajardose', cursive;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-	color: #e74c3c;
-	text-transform: capitalize;
+	.title{
+
+		color: #fff;
+		font-size: 4em;
+	}
+
+	.subtitle{
+
+		color: #fff;
+		font-size: 2em;
+	}
+
+	.btn-call{
+
+		font-size: 1.4em;
+		font-family: 'Roboto Condensed', sans-serif;
+		padding: .6em 1.8em;
+		
+		&:hover{
+
+			cursor: pointer;
+		}
+	}
+}
+
+
+//about
+.about{
+	
+	display: flex;
+	align-items: center;
+	height: 100vh;
+
+	background-color: #ecf0f1;
+
+	.title{
+		
+		font-size: 4em;
+		font-weight: 500;
+		text-transform: capitalize;
+		text-align: center;
+		margin: 0 0 20px 0;
+	}
+
+	.description{
+		
+		font-size: 1.2em;
+		text-align: center;
+		line-height: 2em;
+	}
+
+	.subtitle{
+		
+		font-size: 1.4em;
+		text-align: center;
+		margin: 25px 0 0 0;
+	}
+
+	.social-media{
+
+		display: flex;
+		justify-content: center;
+		list-style-type: none;
+		
+
+		-webkit-margin-before: 10px;
+		-webkit-margin-after: 0;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		-webkit-padding-start: 0px;
+
+		.list-social-media{
+
+			margin: 5px;
+		}
+
+		a{
+
+			color: #f0ad4e;
+		}
+	}
 }
