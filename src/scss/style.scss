@@ -1,7 +1,7 @@
 @import "../components/bootstrap/scss/bootstrap";
 @import "../components/font-awesome/scss/font-awesome";
 @import "https://fonts.googleapis.com/css?family=Miss+Fajardose|Roboto+Condensed";
-
+@import "_placeholder";
 
 body{
 
@@ -27,7 +27,7 @@ body{
 	
 	position: fixed;
 	width: 100%;
-	//background: rgba(0, 0, 0, 0.8);
+	z-index: 100;
 }
 
 .nav{
@@ -40,6 +40,7 @@ body{
 		align-items: center;
 		margin-bottom: 0;
 		list-style-type: none;
+		@extend %reseting-ul;
 
 		.logo{
 
@@ -99,10 +100,12 @@ body{
 		font-size: 1.4em;
 		font-family: 'Roboto Condensed', sans-serif;
 		padding: .6em 1.8em;
+		background-color: transparent;
 		
 		&:hover{
-
+			
 			cursor: pointer;
+			background-color: darken(#f0ad4e, 15%);
 		}
 	}
 }
@@ -145,6 +148,7 @@ body{
 		display: flex;
 		justify-content: center;
 		list-style-type: none;
+		@extend %reseting-ul;
 		
 
 		-webkit-margin-before: 10px;
@@ -161,6 +165,114 @@ body{
 		a{
 
 			color: #f0ad4e;
+		}
+	}
+}
+
+//service
+.service{
+
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.8);
+	
+	.title{
+
+		text-align: center;
+		padding: 15px 0;
+	}
+
+	.subtitle{
+
+		text-align: center;
+	}
+}
+
+.list-service{
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	@extend %reseting-ul;
+	
+	li{
+
+		list-style-type: none;
+
+		&:first-child{
+
+			margin-left: -15px;
+		}
+	}
+
+	.img-service{
+
+		margin-left: 15px;
+	}
+
+	.subtitle-img{
+
+		text-align: center;
+	}
+}
+
+//photos
+.gallery-photos{
+	
+	height: 100vh;
+	display: flex;
+	align-items: center;
+
+	.container-fluid{
+		
+		padding-top: 20px;
+		padding-left: 1px;
+		padding-right: 1px;
+	}
+
+	.title{
+
+		text-align: center;
+		margin: 15px 0;
+	}
+
+	.list-img{
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@extend %reseting-ul;
+
+		li{
+
+			list-style-type: none;
+		}
+		
+		.img-photos{
+			
+			margin: 0;
+			max-width: 371px;
+			max-height: 249px;
+			overflow: hidden;
+						
+			img{
+			
+				transform: scale(1.12);
+
+				&:hover {
+					
+					cursor: pointer;
+					transition: filter 0.35s, transform 0.35s;
+					transform: scale(1);
+					-webkit-filter: brightness(50%);
+					-moz-filter: brightness(50%);
+					-ms-filter: brightness(50%);
+					-o-filter: brightness(50%);
+					filter: brightness(50%);
+				}
+			}
 		}
 	}
 }

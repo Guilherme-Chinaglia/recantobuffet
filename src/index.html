@@ -9,6 +9,38 @@
 </head>
 <body>
 	<section class="home">
+	<!-- MODAL -->
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="form-group">
+	            <label for="recipient-name" class="form-control-label">Recipient:</label>
+	            <input type="text" class="form-control" id="recipient-name">
+	          </div>
+	          <div class="form-group">
+	            <label for="message-text" class="form-control-label">Message:</label>
+	            <textarea class="form-control" id="message-text"></textarea>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Send message</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- FIM MODAL -->
 		<header class="fix-nav">
 			<nav class="nav">
 				<ul class="nav-list">
@@ -25,7 +57,7 @@
 		<section class="call-home">
 			<h2 class="title">Seja bem vindo</h2>
 			<p class="subtitle">Realize o seu evento em nosso espaço</p>
-			<button type="button" class="btn btn-warning btn-call">Reserve já</button>
+			<button type="button" class="btn btn-warning btn-call" data-toggle="modal" data-target="#exampleModal" data-whatever="Reserve já">Reserve já</button>
 		</section>
 	</section>
 	<section class="about">
@@ -41,8 +73,104 @@
 			</ul>
 		</div>
 	</section>
-	<section>
-		
+	<section class="service">
+		<div class="container">
+			<h2 class="title">Serviços de Buffet</h2>
+			<p class="subtitle">Contamos com os diversos serviços de um buffet etc...</p>
+			<ul class="list-service">
+				<li>
+					<figure class="img-service">
+						<img src="../img/img-service.jpg" alt="">
+						<figcaption class="subtitle-img">Casamentos</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-service">
+						<img src="../img/img-service.jpg" alt="">
+						<figcaption class="subtitle-img">Debutantes</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-service">
+						<img src="../img/img-service.jpg" alt="">
+						<figcaption class="subtitle-img">Aniversários</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-service">
+						<img src="../img/img-service.jpg" alt="">
+						<figcaption class="subtitle-img">Corporativos</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-service">
+						<img src="../img/img-service.jpg" alt="">
+						<figcaption class="subtitle-img">Infantis</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="gallery-photos">
+		<div class="container-fluid">
+			<h2 class="title">Galeria de Fotos</h2>
+			<ul class="list-img">
+				<li>
+					<figure class="img-photos">
+						<img src="../img/galeria/001.jpg" alt="">
+						<figcaption class="subtitle-photos"></figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-photos">
+						<img src="../img/galeria/002.jpg" alt="">
+						<figcaption class="subtitle-photos"></figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-photos">
+						<img src="../img/galeria/003.jpg" alt="">
+						<figcaption class="subtitle-photos"></figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-photos">
+						<img src="../img/galeria/004.jpg" alt="">
+						<figcaption class="subtitle-photos"></figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-photos">
+						<img src="../img/galeria/005.jpg" alt="">
+						<figcaption class="subtitle-photos"></figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-photos">
+						<img src="../img/galeria/006.jpg" alt="">
+						<figcaption class="subtitle-photos"></figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-photos">
+						<img src="../img/galeria/007.jpg" alt="">
+						<figcaption class="subtitle-photos"></figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-photos">
+						<img src="../img/galeria/008.jpg" alt="">
+						<figcaption class="subtitle-photos"></figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure class="img-photos">
+						<img src="../img/galeria/009.jpg" alt="">
+						<figcaption class="subtitle-photos"></figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div>
 	</section>
 
 
