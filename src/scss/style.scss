@@ -21,25 +21,52 @@ body{
 	justify-content: center;
 	height: 100vh;	
 	background: url(../img/slide-1.jpg) no-repeat fixed center;
+	background-size: cover;
 }
 
+//navbars
 .nav-bars{
 
-	position: fixed;
-	top: 10px;
-	right: 20px;
+	display: none;
+	
+	@include media-breakpoint-down(md) {
 
-;	.nav-bars-icon{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;
+		padding: 15px;
+		width: 100%;
+		z-index: 100;
 
-		display: none;
+	
+		.logo{
 
-		@include media-breakpoint-down(md) {
+			display: inline-block;
+
+			.title-link{
+
+				text-decoration: none;
+			}
+
+			.title-logo{
+				
+				font-family: 'Miss Fajardose', cursive;
+				font-size: 4rem;
+
+				color: #e74c3c;
+				text-transform: capitalize;
+			}
+		}
+
+		.nav-bars-icon{
 			
-			display: inline-block;	
+			display: inline-block;
+			float: right;
 			color: #fff;
 		}
 	}
-}	
+}
 
 .fix-nav{
 	
@@ -110,12 +137,22 @@ body{
 
 		color: #fff;
 		font-size: 4em;
+
+		@include media-breakpoint-down(sm) {
+
+			font-size: 3em;
+		}
 	}
 
 	.subtitle{
 
 		color: #fff;
 		font-size: 2em;
+
+		@include media-breakpoint-down(sm) {
+
+			font-size: 1.5em;
+		}
 	}
 
 	.btn-call{
@@ -141,6 +178,12 @@ body{
 	align-items: center;
 	height: 100vh;
 
+	@include media-breakpoint-down(sm) {
+		
+		height: auto;
+		padding: 15px 0;
+	}
+
 	background-color: #ecf0f1;
 
 	.title{
@@ -150,6 +193,11 @@ body{
 		text-transform: capitalize;
 		text-align: center;
 		margin: 0 0 20px 0;
+
+		@include media-breakpoint-down(sm) {
+			
+			font-size: 3.5rem;
+		}
 	}
 
 	.description{
@@ -168,11 +216,22 @@ body{
 	height: 100vh;
 	color: #fff;
 	background: rgba(0, 0, 0, 0.8);
+
+	@include media-breakpoint-down(sm) {
+		
+		padding: 15px 0;
+		height: auto;
+	}
 	
 	.title{
 
 		text-align: center;
 		padding: 15px 0;
+
+		@include media-breakpoint-down(sm) {
+
+			font-size: 3.5em;
+		}
 	}
 
 	.subtitle{
@@ -195,6 +254,12 @@ body{
 		&:first-child{
 
 			margin-left: -15px;
+			
+			@include media-breakpoint-down(sm) {
+				
+				margin-left: 0px;
+			}
+
 		}
 	}
 
@@ -213,45 +278,63 @@ body{
 .gallery-photos{
 	
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	padding-top: 20px;
+	padding-left: 1px;
+	padding-right: 1px;
 
 	color: #fff;
 	background-color: #000;
 
-	.container-fluid{
-		
-		padding-top: 20px;
-		padding-left: 1px;
-		padding-right: 1px;
+	.photos{
+	
+		display: flex;
+		justify-content: center;
 	}
 
 	.title{
 
 		text-align: center;
 		margin: 15px 0;
+
+		@include media-breakpoint-down(sm) {
+			
+			font-size: 3.5rem;
+			padding: 15px 0;
+		}
 	}
 
 	.list-img{
-
+		
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		@extend %reseting-ul;
 
 		li{
-
+			
+			border: 2px solid #fff;
 			list-style-type: none;
+
+			@include media-breakpoint-down(sm) {
+				
+				margin: 15px 0;
+			}
 		}
 		
 		.img-photos{
 			
 			margin: 0;
-			max-width: 371px;
 			max-height: 249px;
 			overflow: hidden;
 						
 			img{
-			
+				
+				@include media-breakpoint-down(md) {
+
+					width: 350px;
+				}	
+
 				transform: scale(1.12);
 
 				&:hover{
@@ -277,16 +360,53 @@ body{
 	display: flex;
 	align-items: center;
 
+	@include media-breakpoint-down(sm) {
+		
+		height: auto;
+		margin-bottom: 15px;	
+	}
+
+	.row{
+
+		.col{
+
+			@include media-breakpoint-down(sm) {
+				
+				flex-basis: auto;	
+			}
+		}
+	}
+
 	.title{
 		
 		text-align: center;
 		margin: 15px 0;
+	}
+	
+	.title-adress{
+
+		font-size: 1.2rem;
+		font-weight: bold;
+		margin: 15px 0;
+
+		@include media-breakpoint-down(sm) {
+			
+			text-align: center;	
+		}
 	}
 }
 
 .address{
 
 	line-height: 30px;
+
+	@include media-breakpoint-down(sm) {
+		
+		text-align: center;	
+		padding-bottom: 15px;
+		border-bottom: 1px solid #000;
+	}
+
 }
 
 .social-media{
@@ -303,6 +423,12 @@ body{
 		list-style-type: none;
 		
 		@extend %reseting-ul;
+
+		@include media-breakpoint-down(sm) {
+			
+			justify-content: center;
+			
+		}
 	}
 
 	.item-social-media{
@@ -326,12 +452,27 @@ body{
 	}
 }
 
+//form-contact
+
+.title-contact{
+
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin: 15px 0;
+
+	@include media-breakpoint-down(sm) {
+		
+		text-align: center;	
+	}
+}
+
 //footer
 .footer{
 
 	margin-bottom: -18px;
 	display: flex;
 	justify-content: center;
+	text-align: center;
 	padding: 15px;
 
 	background-color: #000;

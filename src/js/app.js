@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(window).scroll(function() {
-      $('.fix-nav').css('background', 'rgba(0, 0, 0, 0.8)');
+      $('.fix-nav, .nav-bars').css('background', 'rgba(0, 0, 0, 0.8)');
     });
 }); //Falta implementar somente no scrolldown
 
