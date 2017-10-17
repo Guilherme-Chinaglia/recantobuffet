@@ -160,7 +160,8 @@ body{
 		font-size: 1.4em;
 		font-family: 'Roboto Condensed', sans-serif;
 		padding: .6em 1.8em;
-		background-color: transparent;
+		background-color: rgba(255, 255, 255, .1);
+		border-color: #fff;
 		
 		&:hover{
 			
