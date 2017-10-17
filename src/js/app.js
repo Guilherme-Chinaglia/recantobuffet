@@ -4,8 +4,7 @@ $(document).ready(function() {
     });
 }); //Falta implementar somente no scrolldown
 
-
-/*
+//função scroll suave de página
 function ativaScrollSuave(selector){
 
 	$(selector).click(function(event){
@@ -19,7 +18,8 @@ function ativaScrollSuave(selector){
 	});
 }
 
-ativaScrollSuave('a[href*=panel-about]');
-ativaScrollSuave('a[href*=panel-speakers]');
-ativaScrollSuave('a[href*=panel-form]');
-*/
+ativaScrollSuave('a[href*=home]');
+ativaScrollSuave('a[href*=quem-somos]');
+ativaScrollSuave('a[href*=servicos]');
+ativaScrollSuave('a[href*=fotos]');
+ativaScrollSuave('a[href*=contato]');
