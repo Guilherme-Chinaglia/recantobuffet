@@ -1,4 +1,4 @@
-var gulp 		= require("gulp");
+;var gulp 		= require("gulp");
 var sass 		= require("gulp-sass");
 var htmlmin 	= require("gulp-htmlmin");
 var notify 		= require("gulp-notify");
