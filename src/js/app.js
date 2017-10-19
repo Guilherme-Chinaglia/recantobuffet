@@ -1,8 +1,15 @@
-$(document).ready(function() {
-    $(window).scroll(function() {
-      $('.fix-nav, .nav-bars').css('background', 'rgba(0, 0, 0, 0.8)');
-    });
-}); //Falta implementar somente no scrolldown
+$(function(){
+	
+	$('html, body').on('click', function(e){
+		if(e.target == document.documentElement){	
+			$('html, body').removeClass('show-menu');
+		}
+	});
+
+	$('#js-open-menu').on('click',  function(){
+		$('html').addClass('show-menu');
+	});
+});
 
 //função scroll suave de página
 function ativaScrollSuave(selector){

@@ -18,3 +18,12 @@
 	-moz-margin-end: 0px;
 	-moz-padding-start: 0px;
 }
+
+%animate-transition{
+	
+	-webkit-transition: transform .3s ease-in-out;
+	-moz-transition: transform .3s ease-in-out;
+	-ms-transition: transform .3s ease-in-out;
+	-o-transition: transform .3s ease-in-out;
+	transition: transform .3s ease-in-out;
+}

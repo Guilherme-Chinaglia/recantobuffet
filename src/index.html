@@ -12,9 +12,6 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<section class="home">
-	<!-- MODAL -->
-
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
@@ -43,191 +40,214 @@
 	    </div>
 	  </div>
 	</div>
-	<!-- FIM MODAL -->
-		<div class="nav-bars">
-			<div class="logo">
-				<a class="title-link" href="#"><h1 class="title-logo">recanto buffet</h1></a>
-			</div>
-			<div class="nav-bars-icon">
-				<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-			</div>
-		</div>
-		<header class="fix-nav">
-			<nav class="nav">
-				<ul class="nav-list">
-					<li class="nav-item"><a href="#home">home</a></li>
-					<li class="nav-item"><a href="#quem-somos">quem somos</a></li>
-					<li class="nav-item"><a href="#servicos">serviços</a></li>
-					<li class="nav-item"><a class="title-link" href="#"><h1 class="logo">recanto buffet</h1></a></li>
-					<li class="nav-item"><a href="#fotos">fotos</a></li>
-					<li class="nav-item"><a href="#">orçamento</a></li>
-					<li class="nav-item"><a href="#contato">contato</a></li>
-				</ul>
-			</nav>
-		</header>
-		<section id="home" class="call-home">
-			<h2 class="title">Seja bem vindo</h2>
-			<p class="subtitle">Realize o seu evento em nosso espaço</p>
-			<button type="button" class="btn btn-warning btn-call" data-toggle="modal" data-target="#exampleModal" data-whatever="Reserve já">Reserve já</button>
-		</section>
-	</section>
-	<section id="quem-somos" class="about">
-		<div class="container">
-			<h2 class="title">quem somos</h2>
-			<p class="description"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem cum similique esse ipsum repellendus facilis quam incidunt eum soluta, quas vitae iusto odio, sit labore fugit quo, aliquam ipsa velit!</span>
-			<span>Ea, ipsa possimus perferendis. Velit soluta, doloremque at neque, ullam tenetur assumenda sit perspiciatis, eius rem culpa. Facilis harum suscipit corporis, eius, pariatur voluptates, sint optio tempora veniam nesciunt voluptatum!</span>
-			<span>Laborum voluptatum dolorem nihil sed, repellat laudantium vero nostrum at iure delectus quaerat alias nesciunt molestiae error corporis explicabo expedita suscipit quia impedit debitis, quod. Explicabo quo, dolor. Blanditiis, quisquam.</span></p>
-		</div>
-	</section>
-	<section id="servicos" class="service">
-		<div class="container">
-			<h2 class="title">Serviços de Buffet</h2>
-			<p class="subtitle">Contamos com os diversos serviços de um buffet etc...</p>
-			<ul class="list-service">
-				<li>
-					<figure class="img-service">
-						<img src="img/img-service.jpg" alt="">
-						<figcaption class="subtitle-img">Casamentos</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure class="img-service">
-						<img src="img/img-service.jpg" alt="">
-						<figcaption class="subtitle-img">Debutantes</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure class="img-service">
-						<img src="img/img-service.jpg" alt="">
-						<figcaption class="subtitle-img">Aniversários</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure class="img-service">
-						<img src="img/img-service.jpg" alt="">
-						<figcaption class="subtitle-img">Corporativos</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure class="img-service">
-						<img src="img/img-service.jpg" alt="">
-						<figcaption class="subtitle-img">Infantis</figcaption>
-					</figure>
-				</li>
+	<!-- fim modal -->
+	
+	<div class="menu-offcanvas">
+		<h1 class="logo">recanto buffet</h1>
+		<nav class="nav">
+			<ul class="nav-list">
+				<li class="nav-item"><a href="#home">home</a></li>
+				<li class="nav-item"><a href="#quem-somos">quem somos</a></li>
+				<li class="nav-item"><a href="#servicos">serviços</a></li>
+				<li class="nav-item"><a href="#fotos">fotos</a></li>
+				<li class="nav-item"><a href="#">orçamento</a></li>
+				<li class="nav-item"><a href="#contato">contato</a></li>
 			</ul>
+		</nav>
+		<div class="social-media-nav">
+			<a class="link-social-media-nav" href="#">
+				<i class="fa fa-instagram fa-size" aria-hidden="true"></i>
+			</a>
+			<a class="link-social-media-nav" href="#">
+				<i class="fa fa-facebook-square fa-size" aria-hidden="true"></i>
+			</a>
 		</div>
-	</section>
-	<section id="fotos" class="gallery-photos">
-			<h2 class="title">Galeria de Fotos</h2>
-			<div class="photos">
-				<ul class="list-img">
+	</div>
+	<!-- fim Menu Offcanvas -->
+	<section class="wrap">
+		<section class="home">
+			<div class="nav-bars">
+					<i id="js-open-menu" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+			</div>
+			<!--
+			<header class="fix-nav">
+				<nav class="nav">
+					<ul class="nav-list">
+						<li class="nav-item"><a href="#home">home</a></li>
+						<li class="nav-item"><a href="#quem-somos">quem somos</a></li>
+						<li class="nav-item"><a href="#servicos">serviços</a></li>
+						<li class="nav-item"><a class="title-link" href="#"><h1 class="logo">recanto buffet</h1></a></li>
+						<li class="nav-item"><a href="#fotos">fotos</a></li>
+						<li class="nav-item"><a href="#">orçamento</a></li>
+						<li class="nav-item"><a href="#contato">contato</a></li>
+					</ul>
+				</nav>
+			</header>
+			-->
+			<section id="home" class="call-home">
+				<h1 class="title">Recanto Buffet</h1>
+				<p class="subtitle">Realize o seu evento em nosso espaço</p>
+				<button type="button" class="btn btn-warning btn-call" data-toggle="modal" data-target="#exampleModal" data-whatever="Reserve já">reserve já</button>
+			</section>
+		</section>
+		<section id="quem-somos" class="about">
+			<div class="container">
+				<h2 class="title">quem somos</h2>
+				<p class="description"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem cum similique esse ipsum repellendus facilis quam incidunt eum soluta, quas vitae iusto odio, sit labore fugit quo, aliquam ipsa velit!</span>
+				<span>Ea, ipsa possimus perferendis. Velit soluta, doloremque at neque, ullam tenetur assumenda sit perspiciatis, eius rem culpa. Facilis harum suscipit corporis, eius, pariatur voluptates, sint optio tempora veniam nesciunt voluptatum!</span>
+				<span>Laborum voluptatum dolorem nihil sed, repellat laudantium vero nostrum at iure delectus quaerat alias nesciunt molestiae error corporis explicabo expedita suscipit quia impedit debitis, quod. Explicabo quo, dolor. Blanditiis, quisquam.</span></p>
+			</div>
+		</section>
+		<section id="servicos" class="service">
+			<div class="container">
+				<h2 class="title">Serviços de Buffet</h2>
+				<p class="subtitle">Contamos com os diversos serviços de um buffet etc...</p>
+				<ul class="list-service">
 					<li>
-						<figure class="img-photos">
-							<img src="img/galeria/001.jpg" alt="">
-							<figcaption class="subtitle-photos"></figcaption>
+						<figure class="img-service">
+							<img src="img/img-service.jpg" alt="">
+							<figcaption class="subtitle-img">Casamentos</figcaption>
 						</figure>
 					</li>
 					<li>
-						<figure class="img-photos">
-							<img src="img/galeria/002.jpg" alt="">
-							<figcaption class="subtitle-photos"></figcaption>
+						<figure class="img-service">
+							<img src="img/img-service.jpg" alt="">
+							<figcaption class="subtitle-img">Debutantes</figcaption>
 						</figure>
 					</li>
 					<li>
-						<figure class="img-photos">
-							<img src="img/galeria/003.jpg" alt="">
-							<figcaption class="subtitle-photos"></figcaption>
+						<figure class="img-service">
+							<img src="img/img-service.jpg" alt="">
+							<figcaption class="subtitle-img">Aniversários</figcaption>
 						</figure>
 					</li>
 					<li>
-						<figure class="img-photos">
-							<img src="img/galeria/004.jpg" alt="">
-							<figcaption class="subtitle-photos"></figcaption>
+						<figure class="img-service">
+							<img src="img/img-service.jpg" alt="">
+							<figcaption class="subtitle-img">Corporativos</figcaption>
 						</figure>
 					</li>
 					<li>
-						<figure class="img-photos">
-							<img src="img/galeria/005.jpg" alt="">
-							<figcaption class="subtitle-photos"></figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure class="img-photos">
-							<img src="img/galeria/006.jpg" alt="">
-							<figcaption class="subtitle-photos"></figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure class="img-photos">
-							<img src="img/galeria/007.jpg" alt="">
-							<figcaption class="subtitle-photos"></figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure class="img-photos">
-							<img src="img/galeria/008.jpg" alt="">
-							<figcaption class="subtitle-photos"></figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure class="img-photos">
-							<img src="img/galeria/009.jpg" alt="">
-							<figcaption class="subtitle-photos"></figcaption>
+						<figure class="img-service">
+							<img src="img/img-service.jpg" alt="">
+							<figcaption class="subtitle-img">Infantis</figcaption>
 						</figure>
 					</li>
 				</ul>
-		</div>	
-	</section>
-	<section id="contato" class="contact">
-		<div class="container">
-			<h2 class="title">Contato</h2>
-				<div class="row">
-					<div class="col">
-						<h3 class="title-adress">Endereço</h3>
-						<address class="address">
-							<p>Rua Lorem Ipsum, XX, Barueri-SP, 11111-111</p>
-							<p>hello@recantobuffet.com.br</p>
-							<p>
-								<abbr title="phone">Tel:</abbr>(11) 2222-2222
-							</p>
-							<div class="social-media">
-								<h4 class="subtitle">Conheça-nos um pouco mais</h4>
-								<ul class="list-social-media">
-									<li class="item-social-media"><a class="link-social-media" href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
-									<li class="item-social-media"><a class="link-social-media" href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</address>
-					</div>
-					<div class="col">
-						<h3 class="title-contact">Fale conosco</h3>
-						<form action="#">
-							<div class="form-group">
-								<label for="nome">Nome (campo obrigatório)</label>
-								<input type="text" class="form-control" id="nome" placeholder="preencha com seu nome" required>
-							</div>
-							<div class="form-group">
-								<label for="email">E-mail (campo obrigatório)</label>
-								<input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com.br" required>
-							</div>
-							<div class="form-group">
-								<label for="telefone">Telefone </label>
-								<input type="tel" class="form-control" id="tel" placeholder="(11) 99999-9999">
-							</div>
-							<div class="form-group">
-							  <label for="mensagem">Mensagem</label>
-							  <textarea class="form-control" id="mensagem" rows="3"></textarea>
-							</div>
-							<button type="submit" class="btn btn-warning">Enviar</button>
-						</form>
-					</div>
-				</div>	
-		</div>
-	</section>
-	<section class="footer">
-		<footer>
-			<p class="author">&copy; 2017 Desenvolvido por <a href="#" rel="author">Guilherme Chinaglia.</a> Todos os direitos reservados.</p>
-		</footer>
+			</div>
+		</section>
+		<section id="fotos" class="gallery-photos">
+				<h2 class="title">Galeria de Fotos</h2>
+				<div class="photos">
+					<ul class="list-img">
+						<li>
+							<figure class="img-photos">
+								<img src="img/galeria/001.jpg" alt="">
+								<figcaption class="subtitle-photos"></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure class="img-photos">
+								<img src="img/galeria/002.jpg" alt="">
+								<figcaption class="subtitle-photos"></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure class="img-photos">
+								<img src="img/galeria/003.jpg" alt="">
+								<figcaption class="subtitle-photos"></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure class="img-photos">
+								<img src="img/galeria/004.jpg" alt="">
+								<figcaption class="subtitle-photos"></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure class="img-photos">
+								<img src="img/galeria/005.jpg" alt="">
+								<figcaption class="subtitle-photos"></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure class="img-photos">
+								<img src="img/galeria/006.jpg" alt="">
+								<figcaption class="subtitle-photos"></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure class="img-photos">
+								<img src="img/galeria/007.jpg" alt="">
+								<figcaption class="subtitle-photos"></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure class="img-photos">
+								<img src="img/galeria/008.jpg" alt="">
+								<figcaption class="subtitle-photos"></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure class="img-photos">
+								<img src="img/galeria/009.jpg" alt="">
+								<figcaption class="subtitle-photos"></figcaption>
+							</figure>
+						</li>
+					</ul>
+			</div>	
+		</section>
+		<section id="contato" class="contact">
+			<div class="container">
+				<h2 class="title">Contato</h2>
+					<div class="row">
+						<div class="col">
+							<h3 class="title-adress">Endereço</h3>
+							<address class="address">
+								<p>Rua Lorem Ipsum, XX, Barueri-SP, 11111-111</p>
+								<p>hello@recantobuffet.com.br</p>
+								<p>
+									<abbr title="phone">Tel:</abbr>(11) 2222-2222
+								</p>
+								<div class="social-media">
+									<h4 class="subtitle">Conheça-nos um pouco mais</h4>
+									<ul class="list-social-media">
+										<li class="item-social-media"><a class="link-social-media" href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+										<li class="item-social-media"><a class="link-social-media" href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</address>
+						</div>
+						<div class="col">
+							<h3 class="title-contact">Fale conosco</h3>
+							<form action="#">
+								<div class="form-group">
+									<label for="nome">Nome (campo obrigatório)</label>
+									<input type="text" class="form-control" id="nome" placeholder="preencha com seu nome" required>
+								</div>
+								<div class="form-group">
+									<label for="email">E-mail (campo obrigatório)</label>
+									<input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com.br" required>
+								</div>
+								<div class="form-group">
+									<label for="telefone">Telefone </label>
+									<input type="tel" class="form-control" id="tel" placeholder="(11) 99999-9999">
+								</div>
+								<div class="form-group">
+								  <label for="mensagem">Mensagem</label>
+								  <textarea class="form-control" id="mensagem" rows="3"></textarea>
+								</div>
+								<button type="submit" class="btn btn-warning">Enviar</button>
+							</form>
+						</div>
+					</div>	
+			</div>
+		</section>
+		<section class="footer">
+			<footer>
+				<p class="author">&copy; 2017 Desenvolvido por <a href="#" rel="author">Guilherme Chinaglia.</a> Todos os direitos reservados.</p>
+			</footer>
+		</section>
 	</section>
 <script src="js/main.js"></script>	
 <script src="js/app.js"></script>
