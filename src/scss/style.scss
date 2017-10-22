@@ -29,6 +29,11 @@ body{
 
 	background-color: #131312;
 
+	@include media-breakpoint-down(sm) {
+		
+			width: 80%;
+		}
+
 	.logo{
 		font-family: 'Great Vibes', cursive;
 		font-size: 2.5rem;
@@ -37,6 +42,11 @@ body{
 		margin-top: 6rem;
 
 		color: #fff;
+		
+		@include media-breakpoint-down(sm) {
+			
+			margin-top: 2rem;
+		}
 	}
 }
 
@@ -76,6 +86,7 @@ body{
 .nav{
 	justify-content: center;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	.nav-list{
 		@extend %reseting-ul;
 		width: 100%;
@@ -84,6 +95,7 @@ body{
 	}
 	.nav-item{
 
+		margin-top: 5px;
 		padding: 8px;
 
 		&:hover{
@@ -91,25 +103,44 @@ body{
 			background-color: #212121;
 		}
 
+		&.active{
+
+			background-color: #212121;
+
+			a{
+
+				color: #fff;
+			}
+		}
+
 		a{
 			
 			display: list-item;
 			padding: 3px;
 			text-decoration: none;
+			-webkit-outline:none;
+			-moz-outline:none;
+			-ms-outline:none;
+			-o-outline:none;
+			outline:none;
 
 			color: #b3b3b1;
 			text-transform: uppercase;
+
+			@include media-breakpoint-down(sm) {
+				
+				font-size: 1.2em;
+			}
+			
+			&:active{
+
+				border: none;
+			}
 		}
 
 		&:hover a{
 			
 			color: #fff;
-		}
-
-		&:focus a{
-
-			color: #fff;
-			background-color: #212121;
 		}
 	}
 }
@@ -122,9 +153,15 @@ body{
 	
 	.link-social-media-nav{
 		
-		margin: 3px;
+		margin: 5px 8px;
+		padding-top: 5px;
 		text-decoration: none;
 		color: #f0ad4e;
+
+		@include media-breakpoint-down(sm) {
+			
+			font-size: 2em;
+		}
 
 		&:hover{
 			
@@ -142,8 +179,6 @@ body{
 
 	position: relative;
 	width: 100%;
-	
-	//@include displacement(0);	
 }
 
 //home
@@ -164,6 +199,7 @@ body{
 		height: 45px;
 		cursor: pointer;
 		z-index: 100;
+		text-align: center;
 
 		color: #e8e8e8;
 
@@ -175,67 +211,6 @@ body{
 	}
 }
 
-//navbars
-
-/*
-.fix-nav{
-	
-	position: fixed;
-	width: 100%;
-	z-index: 100;
-
-	@include media-breakpoint-down(md) {
-		
-		display: none;
-	}
-}
-
-.nav{
-	
-	justify-content: center;
-	
-	.nav-list{
-
-		display: flex;
-		align-items: center;
-		margin-bottom: 0;
-		list-style-type: none;
-		@extend %reseting-ul;
-
-		.logo{
-
-			font-family: 'Miss Fajardose', cursive;
-			font-size: 5em;
-
-			color: #e74c3c;
-			text-transform: capitalize;
-		}
-	}
-}
-
-.nav-item{
-
-	padding: .9rem;
-
-	a{
-
-		text-transform: uppercase;
-
-		color: #fff;
-
-		&:hover{
-
-			color: #f0ad4e;
-			text-decoration: none;
-		}
-	}
-
-	.title-link{
-
-		text-decoration: none;
-	}
-}
-*/
 .call-home{
 
 	display: flex;
@@ -247,6 +222,7 @@ body{
 
 		color: #fff;
 		font-size: 4.5em;
+		border-bottom: 1px solid #fff;
 
 		@include media-breakpoint-down(sm) {
 
@@ -273,7 +249,7 @@ body{
 		text-transform: uppercase;
 		padding: .6em 1.6em;
 		background-color: transparent;
-		border-color: #fff;
+		border: 2px solid #fff;
 		
 		&:hover {
 			
@@ -340,8 +316,8 @@ body{
 	display: flex;
 	align-items: center;
 	height: 100vh;
-	color: #fff;
-	background: rgba(0, 0, 0, 0.8);
+	color: #000;
+	background: rgba(255, 255, 255, 0.8);
 
 	@include media-breakpoint-down(sm) {
 		
@@ -369,39 +345,26 @@ body{
 .list-service{
 
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
 	flex-wrap: wrap;
 	@extend %reseting-ul;
+	margin-top: 20px;
 	
 	li{
 
 		list-style-type: none;
-
-		&:first-child{
-
-			margin-left: -15px;
-			
-			@include media-breakpoint-down(sm) {
-				
-				margin-left: 0px;
-			}
-
-		}
 	}
 
 	.img-service{
 
-		margin-left: 15px;
-
-		@include media-breakpoint-down(sm) {
-
-			margin-left: 0;
-		}	
+		width: 160px;
 	}
 
 	.subtitle-img{
 
 		text-align: center;
+		font-weight: bold;
 	}
 }
 
@@ -463,12 +426,12 @@ body{
 				
 				@include media-breakpoint-down(md) {
 
-					width: 350px;
+					max-width: 350px;
 				}	
 
 				@include media-breakpoint-down(sm) {
 
-					width: 250px;
+					width: 300px;
 				}	
 
 				transform: scale(1.12);
@@ -492,14 +455,14 @@ body{
 //contact
 .contact{
 
-	height: 100vh;
+	//height: 100vh;
 	display: flex;
 	align-items: center;
-
+	margin-bottom: 15px;
+	
 	@include media-breakpoint-down(sm) {
 		
-		height: auto;
-		margin-bottom: 15px;	
+		height: auto;	
 	}
 
 	.row{
@@ -602,11 +565,19 @@ body{
 	}
 }
 
+//maps
+#map{
+
+	width: 100%;
+	height: 500px;
+}
+
 //footer
 .footer{
 
 	margin-bottom: -18px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	text-align: center;
 	padding: 15px;
@@ -618,5 +589,35 @@ body{
 	.author{
 
 		margin-bottom: 0;
+	}
+}
+
+//modal
+.modal{
+
+	.mod-close{
+
+		position: absolute;
+		top: 2px;
+		right: 6px;
+	}
+
+	.mod-modal-header{
+
+		flex-direction: column;
+
+		background-color: grey;
+		color: #fff;
+		text-align: center;
+	}
+
+	.mod-modal-subtitle{
+
+		margin-top: 6px;
+	}
+
+	.mod-form-group{
+
+		margin-bottom: 0.6em;
 	}
 }

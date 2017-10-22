@@ -12,38 +12,55 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<!-- Modal Bootstrap  -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLabel">
-	        	Solicitar informação para Recanto Buffet <br/>Preencha este formulário e Recanto Buffet entrará em contato em breve.<br/>Todos os dados enviados serão tratados de forma confidencial.
-	        </h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	      <div class="modal-header mod-modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">O Recanto Buffet terá o maior prazer em atendê-lo.</h5>
+					<p class="mod-modal-subtitle">Preencha os campos abaixo que em breve atenderemos sua solicitação.
+	        	Se preferir, entre em contato pelos nossos telefones:
+	        	<br>(11) 4382-3992</p>
+	        <button type="button" class="close mod-close fechar" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
 	      </div>
 	      <div class="modal-body">
 	        <form>
-	          <div class="form-group">
-	            <label for="recipient-name" class="form-control-label">Recipient:</label>
-	            <input type="text" class="form-control" id="recipient-name">
+	          <div class="form-group mod-form-group">
+	            <label for="nome" class="form-control-label">Nome:</label>
+	            <input type="text" class="form-control" id="nome" required="required">
 	          </div>
-	          <div class="form-group">
+	           <div class="form-group mod-form-group">
+	            <label for="email" class="form-control-label">E-mail:</label>
+	            <input type="email" class="form-control" id="email" required="required">
+	          </div>
+	          <div class="form-group mod-form-group">
+	            <label for="telefone" class="form-control-label">Telefone:</label>
+	            <input type="tel" class="form-control" id="tel" required="required" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" placeholder="(99) 9999-9999">
+	          </div>
+	          <div class="form-group mod-form-group">
+	            <label for="convidados" class="form-control-label">Número de convidados</label>
+	            <input type="number" class="form-control" id="convidados" min="1" max="250">
+	          </div>
+	          <div class="form-group mod-form-group">
+	            <label for="data do evento" class="form-control-label">Data do evento</label>
+	            <input type="date" class="form-control" id="data-evento" value="yyyy-MM-dd" placeholder="dd/mm/aaaa">
+	          </div>
+	          <div class="form-group mod-form-group">
 	            <label for="message-text" class="form-control-label">Message:</label>
 	            <textarea class="form-control" id="message-text"></textarea>
 	          </div>
 	        </form>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-	        <button type="button" class="btn btn-primary">Enviar Pedido</button>
+	        <button type="button" class="btn btn-secondary fechar" data-dismiss="modal">Fechar</button>
+	        <button type="submit" class="btn btn-danger">Enviar Pedido</button>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-	<!-- fim modal -->
-	
+	<!-- fim modal bootstrap -->
 	<div class="menu-offcanvas">
 		<h1 class="logo">recanto buffet</h1>
 		<nav class="nav">
@@ -52,15 +69,16 @@
 				<li class="nav-item"><a href="#quem-somos">quem somos</a></li>
 				<li class="nav-item"><a href="#servicos">serviços</a></li>
 				<li class="nav-item"><a href="#fotos">fotos</a></li>
-				<li class="nav-item"><a href="#">orçamento</a></li>
+				<li class="nav-item"><a data-toggle="modal" data-target="#exampleModal" href="#exampleModal">orçamento</a></li>
 				<li class="nav-item"><a href="#contato">contato</a></li>
+				<li class="nav-item"><a href="#map">localização</a></li>
 			</ul>
 		</nav>
 		<div class="social-media-nav">
 			<a class="link-social-media-nav" href="#">
 				<i class="fa fa-instagram fa-size" aria-hidden="true"></i>
 			</a>
-			<a class="link-social-media-nav" href="#">
+			<a target="_blank" class="link-social-media-nav" href="https://www.facebook.com/recantobuffet1/">
 				<i class="fa fa-facebook-square fa-size" aria-hidden="true"></i>
 			</a>
 		</div>
@@ -68,24 +86,9 @@
 	<!-- fim Menu Offcanvas -->
 	<section class="wrap">
 		<section class="home">
-			<div class="nav-bars">
-					<i id="js-open-menu" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+			<div id="js-open-menu" class="nav-bars">
+					<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
 			</div>
-			<!--
-			<header class="fix-nav">
-				<nav class="nav">
-					<ul class="nav-list">
-						<li class="nav-item"><a href="#home">home</a></li>
-						<li class="nav-item"><a href="#quem-somos">quem somos</a></li>
-						<li class="nav-item"><a href="#servicos">serviços</a></li>
-						<li class="nav-item"><a class="title-link" href="#"><h1 class="logo">recanto buffet</h1></a></li>
-						<li class="nav-item"><a href="#fotos">fotos</a></li>
-						<li class="nav-item"><a href="#">orçamento</a></li>
-						<li class="nav-item"><a href="#contato">contato</a></li>
-					</ul>
-				</nav>
-			</header>
-			-->
 			<section id="home" class="call-home">
 				<h1 class="title">Recanto Buffet</h1>
 				<p class="subtitle">Realize o seu evento em nosso espaço</p>
@@ -109,36 +112,30 @@
 		<section id="servicos" class="service">
 			<div class="container">
 				<h2 class="title">Serviços de Buffet</h2>
-				<p class="subtitle">Contamos com os diversos serviços de um buffet recepção, cerimônia, decoração etc...</p>
+				<p class="subtitle">Contamos com os diversos serviços de um buffet.</p>
 				<ul class="list-service">
 					<li>
 						<figure class="img-service">
-							<img src="img/img-service.jpg" alt="">
-							<figcaption class="subtitle-img">Casamentos</figcaption>
+							<img src="img/servicos/003-food.svg" alt="menus especiais">
+							<figcaption class="subtitle-img">Menus especiais</figcaption>
 						</figure>
 					</li>
 					<li>
 						<figure class="img-service">
-							<img src="img/img-service.jpg" alt="">
-							<figcaption class="subtitle-img">Debutantes</figcaption>
+							<img src="img/servicos/002-food-1.svg" alt="serviço de garçons">
+							<figcaption class="subtitle-img">Serviço de garçons</figcaption>
 						</figure>
 					</li>
 					<li>
 						<figure class="img-service">
-							<img src="img/img-service.jpg" alt="">
-							<figcaption class="subtitle-img">Aniversários</figcaption>
+							<img src="img/servicos/004-location.svg" alt="excelente localização">
+							<figcaption class="subtitle-img">Excelente localização</figcaption>
 						</figure>
 					</li>
 					<li>
 						<figure class="img-service">
-							<img src="img/img-service.jpg" alt="">
-							<figcaption class="subtitle-img">Corporativos</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure class="img-service">
-							<img src="img/img-service.jpg" alt="">
-							<figcaption class="subtitle-img">Infantis</figcaption>
+							<img src="img/servicos/001-credit-card.svg" alt="facilidade de pagamento">
+							<figcaption class="subtitle-img">Facilidade de pagamento</figcaption>
 						</figure>
 					</li>
 				</ul>
@@ -150,56 +147,47 @@
 					<ul class="list-img">
 						<li>
 							<figure class="img-photos">
-								<img src="img/galeria/001.jpg" alt="">
-								<figcaption class="subtitle-photos"></figcaption>
+								<img src="img/galeria/001.jpg" alt="salão de festas">
 							</figure>
 						</li>
 						<li>
 							<figure class="img-photos">
-								<img src="img/galeria/002.jpg" alt="">
-								<figcaption class="subtitle-photos"></figcaption>
+								<img src="img/galeria/002.jpg" alt="foto de casamento">
 							</figure>
 						</li>
 						<li>
 							<figure class="img-photos">
-								<img src="img/galeria/003.jpg" alt="">
-								<figcaption class="subtitle-photos"></figcaption>
+								<img src="img/galeria/003.jpg" alt="foto de aniversário quinze anos">
 							</figure>
 						</li>
 						<li>
 							<figure class="img-photos">
-								<img src="img/galeria/004.jpg" alt="">
-								<figcaption class="subtitle-photos"></figcaption>
+								<img src="img/galeria/004.jpg" alt="foto de pista de dj">
 							</figure>
 						</li>
 						<li>
 							<figure class="img-photos">
-								<img src="img/galeria/005.jpg" alt="">
-								<figcaption class="subtitle-photos"></figcaption>
+								<img src="img/galeria/005.jpg" alt="foto de passarela casamento">
 							</figure>
 						</li>
 						<li>
 							<figure class="img-photos">
-								<img src="img/galeria/006.jpg" alt="">
-								<figcaption class="subtitle-photos"></figcaption>
+								<img src="img/galeria/006.jpg" alt="foto de bolo de aniversário">
 							</figure>
 						</li>
 						<li>
 							<figure class="img-photos">
-								<img src="img/galeria/007.jpg" alt="">
-								<figcaption class="subtitle-photos"></figcaption>
+								<img src="img/galeria/007.jpg" alt="foto equipe de garçons">
 							</figure>
 						</li>
 						<li>
 							<figure class="img-photos">
-								<img src="img/galeria/008.jpg" alt="">
-								<figcaption class="subtitle-photos"></figcaption>
+								<img src="img/galeria/008.jpg" alt="mesa de doces">
 							</figure>
 						</li>
 						<li>
 							<figure class="img-photos">
-								<img src="img/galeria/009.jpg" alt="">
-								<figcaption class="subtitle-photos"></figcaption>
+								<img src="img/galeria/009.jpg" alt="enfeite bolo de aniversário">
 							</figure>
 						</li>
 					</ul>
@@ -251,13 +239,34 @@
 					</div>	
 			</div>
 		</section>
+		<section class="maps">
+			<div id="map"></div>
+		</section>
 		<section class="footer">
 			<footer>
-				<p class="author">&copy; 2017 Desenvolvido por <a href="#" rel="author">Guilherme Chinaglia.</a> Todos os direitos reservados.</p>
+				<p class="author">&copy; 2017 Desenvolvido por <a target="_blank" href="www.guilhermechinaglia.com.br" rel="author">Guilherme Chinaglia.</a> Todos os direitos reservados.</p>
 			</footer>
 		</section>
 	</section>
 <script src="js/main.js"></script>	
 <script src="js/app.js"></script>
+<script>
+	//Maps Google
+
+		function initMap() {
+			var uluru = {lat: -23.5327804, lng: -46.8910928};
+			var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 18,
+			center: uluru
+			});
+			var marker = new google.maps.Marker({
+			position: uluru,
+			map: map
+			});
+		}
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtVpEpZZpc3KgDebg3S6dson3mbwOdpGQ&callback=initMap">
+    </script>
 </body>
 </html>
