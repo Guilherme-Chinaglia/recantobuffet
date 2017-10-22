@@ -1,0 +1,36 @@
+//about
+.about{
+	
+	display: flex;
+	align-items: center;
+	height: 100vh;
+
+	@include media-breakpoint-down(sm) {
+		
+		height: auto;
+		padding: 15px 0;
+	}
+
+	background-color: #ecf0f1;
+
+	.title{
+		
+		font-size: 4em;
+		font-weight: 500;
+		text-transform: capitalize;
+		text-align: center;
+		margin: 0 0 20px 0;
+	
+		@include media-breakpoint-down(sm) {
+			
+			font-size: 3.5rem;
+		}
+	}
+
+	.description{
+		
+		font-size: 1.2em;
+		text-align: center;
+		line-height: 2em;
+	}
+}

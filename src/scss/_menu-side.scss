@@ -1,0 +1,159 @@
+//menu-offcanvas
+.menu-offcanvas{
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 200;
+	width: 20%;
+	height: 100%;
+
+	@include displacement(100%);
+	@extend %animate-transition;
+
+	background-color: #131312;
+
+	@include media-breakpoint-down(sm) {
+		
+			width: 80%;
+		}
+
+	.logo{
+		font-family: 'Great Vibes', cursive;
+		font-size: 2.5rem;
+		text-align: center;
+		text-transform: capitalize;	
+		margin-top: 6rem;
+
+		color: #fff;
+		
+		@include media-breakpoint-down(sm) {
+			
+			margin-top: 2rem;
+		}
+	}
+}
+
+.show-menu{
+
+	.menu-offcanvas{
+
+		@include displacement(0);
+		@extend %animate-transition;
+	}
+
+	.wrap{
+
+		@include displacement(-20%);
+		@extend %animate-transition;
+	}
+
+	&:after{
+			
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background-color: rgba(0,0,0,.4);
+	}
+
+	.nav-bars{
+
+		display: none;
+	}
+}
+
+//nav inside menu-offcanvas
+.nav{
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	.nav-list{
+		@extend %reseting-ul;
+		width: 100%;
+		list-style-type: none;
+		text-align: center;
+	}
+	.nav-item{
+
+		margin-top: 5px;
+		padding: 8px;
+
+		&:hover{
+			
+			background-color: #212121;
+		}
+
+		&.active{
+
+			background-color: #212121;
+
+			a{
+
+				color: #fff;
+			}
+		}
+
+		a{
+			
+			display: list-item;
+			padding: 3px;
+			text-decoration: none;
+			-webkit-outline:none;
+			-moz-outline:none;
+			-ms-outline:none;
+			-o-outline:none;
+			outline:none;
+
+			color: #b3b3b1;
+			text-transform: uppercase;
+
+			@include media-breakpoint-down(sm) {
+				
+				font-size: 1.2em;
+			}
+			
+			&:active{
+
+				border: none;
+			}
+		}
+
+		&:hover a{
+			
+			color: #fff;
+		}
+	}
+}
+
+//social-media-nav
+.social-media-nav{
+	
+	display: flex;
+	justify-content: center;
+	
+	.link-social-media-nav{
+		
+		margin: 5px 8px;
+		padding-top: 5px;
+		text-decoration: none;
+		color: #f0ad4e;
+
+		@include media-breakpoint-down(sm) {
+			
+			font-size: 2em;
+		}
+
+		&:hover{
+			
+			color: lighten(#f0ad4e, 10%);
+		}
+
+		.fa-size{
+
+			font-size: 1.5em;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+//modal
+.modal{
+
+	.mod-close{
+
+		position: absolute;
+		top: 2px;
+		right: 6px;
+	}
+
+	.mod-modal-header{
+
+		flex-direction: column;
+
+		background-color: grey;
+		color: #fff;
+		text-align: center;
+	}
+
+	.mod-modal-subtitle{
+
+		margin-top: 6px;
+	}
+
+	.mod-form-group{
+
+		margin-bottom: 0.6em;
+	}
+}

@@ -1,0 +1,90 @@
+//home
+.home{
+	
+	display: flex;
+	justify-content: center;
+	height: 100vh;	
+	background: url(../img/slide-5.jpg) no-repeat fixed center;
+	background-size: cover;
+
+	.nav-bars{
+		
+		position: fixed;
+		top: 30px;
+		right: 30px;
+		width: 70px;
+		height: 45px;
+		cursor: pointer;
+		z-index: 100;
+		text-align: center;
+
+		color: #e8e8e8;
+
+		@include media-breakpoint-down(sm) {
+
+			top: 20px;
+			width: 30px;
+		}
+	}
+}
+
+.call-home{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.title{
+
+		color: #fff;
+		font-size: 4.5em;
+		border-bottom: 1px solid #fff;
+
+		@include media-breakpoint-down(sm) {
+
+			font-size: 3em;
+		}
+	}
+
+	.subtitle{
+
+		color: #fff;
+		font-size: 2em;
+
+		@include media-breakpoint-down(sm) {
+
+			font-size: 1.5em;
+			text-align: center;
+		}
+	}
+
+	.btn-call{
+
+		font-size: 1.1em;
+		font-family: 'Roboto Condensed', sans-serif;
+		text-transform: uppercase;
+		padding: .6em 1.6em;
+		background-color: transparent;
+		border: 2px solid #fff;
+		
+		&:hover {
+			
+			cursor: pointer;
+			background-color: #fff;
+			border-color: #fff;
+			color: #000;
+			font-weight: bold;
+		}
+
+		&:active{
+
+			border-color: #fff;
+		}
+
+		&:focus{
+
+			box-shadow: none;
+		}
+	}
+}

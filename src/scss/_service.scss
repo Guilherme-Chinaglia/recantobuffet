@@ -1,0 +1,57 @@
+//service
+.service{
+
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	color: #000;
+	background: rgba(255, 255, 255, 0.8);
+
+	@include media-breakpoint-down(sm) {
+		
+		padding: 15px 0;
+		height: auto;
+	}
+	
+	.title{
+
+		text-align: center;
+		padding: 15px 0;
+
+		@include media-breakpoint-down(sm) {
+
+			font-size: 3.5em;
+		}
+	}
+
+	.subtitle{
+
+		text-align: center;
+	}
+}
+
+.list-service{
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	@extend %reseting-ul;
+	margin-top: 20px;
+	
+	li{
+
+		list-style-type: none;
+	}
+
+	.img-service{
+
+		width: 160px;
+	}
+
+	.subtitle-img{
+
+		text-align: center;
+		font-weight: bold;
+	}
+}
