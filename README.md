@@ -26,7 +26,7 @@
 		3) bower install [instalar as dependências do projeto (JQuery, Bootstrap e FontAwesome)]
 	</ol>
   <ol>
-		3) gulp (utilize este comando para rodar as tasks do arquivo gulpfile.js)
+		3) gulp (utilize este comando em seu terminal linux/windows para rodar as tasks do arquivo gulpfile.js)
 	</ol>
 </ul>
 
