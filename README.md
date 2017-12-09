@@ -16,7 +16,7 @@
 
 <p> It's necessary to have node.js in your machine: (https://nodejs.org/en/)</p>
 
-1. git clone https://github.com/Guilherme-Chinaglia/recantobuffet.git
+1. git clone
 2. npm install (to install the node_modules path)
 3. bower install [to install the dependencies of the project (JQuery, Bootstrap and FontAwesome)]
 4. gulp (use this command in your terminal linux/windows to run the tasks of the gulpfile.js file)
