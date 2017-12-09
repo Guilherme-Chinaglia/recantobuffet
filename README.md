@@ -1,34 +1,25 @@
-<h1>Site Recanto Buffet</h1>
+# Site Recanto Buffet
 
-<h4>Projeto de estudo e criação de portfólio</h4>
+## Study project and portfolio creation
 
-<h3>Linguagens, Frameworks, Bibliotecas e API Utilizadas</h3>
-<ul>
-	<li>HTML 5</li>
-	<li>CSS 3</li>
-	<li>SASS</li>
-	<li>jQuery</li>
-	<li>Bootstrap v4.0.0-alpha.6</li>
-	<li>Font-awesome</li>
-  <li>Google Maps API</li>
-</ul>
-<h3>Para utilizar o projeto necessário seguir os passos abaixo em seu terminal(linux) ou cmd(windows):</h3>
-<p>Necessário ter instalado o node.js em sua máquina: (https://nodejs.org/en/)</p>
+### Languages, frameworks, libs, and API that i used
 
-<ul>
-	<ol>
-		1) git clone https://github.com/Guilherme-Chinaglia/recantobuffet.git
-	</ol>
-	<ol>
-		2) npm install (instalar a pasta node_modules)
-	</ol>
-	<ol>
-		3) bower install [instalar as dependências do projeto (JQuery, Bootstrap e FontAwesome)]
-	</ol>
-  <ol>
-		3) gulp (utilize este comando em seu terminal linux/windows para rodar as tasks do arquivo gulpfile.js)
-	</ol>
-</ul>
+* HTML 5
+* CSS 3
+* Sass (preprocessor)
+* jQuery
+* Bootstrap v4.0.0-alpha.6
+* Font-awesome
+* Google Maps API
+
+### To run the project it's necessary to follow these steps below in your terminal (linux) or cmd (windows):
+
+<p> It's necessary to have node.js in your machine: (https://nodejs.org/en/)</p>
+
+1. git clone https://github.com/Guilherme-Chinaglia/recantobuffet.git
+2. npm install (to install the node_modules path)
+3. bower install [to install the dependencies of the project (JQuery, Bootstrap and FontAwesome)]
+4. gulp (use this command in your terminal linux/windows to run the tasks of the gulpfile.js file)
 
 
 
